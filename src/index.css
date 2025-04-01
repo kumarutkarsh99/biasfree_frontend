@@ -190,7 +190,7 @@ body, html {
   }
 
 select option:disabled {
-    color: grey !important; /* Grey color for the disabled option */
+    color: grey !important; 
 }
 
 .form-select {
@@ -490,9 +490,9 @@ select option:disabled {
 .text-gradient-1 {
     font-size: 30px !important;
     background: linear-gradient(90deg, #7a36ff, #521c99);
-    -webkit-background-clip: text; /* Required for Safari & Chrome */
-    -webkit-text-fill-color: transparent; /* Makes text transparent so gradient is visible */
-    background-clip: text; /* Standard property */
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text;
     font-weight: bold;
     font-size: 24px;
     font-family: 'Poppins', sans-serif;
@@ -501,9 +501,9 @@ select option:disabled {
 .text-gradient-2 {
     font-size: 60px !important;
     background: linear-gradient(90deg,#ff007f, #7a36ff, #521c99);
-    -webkit-background-clip: text; /* Required for Safari & Chrome */
-    -webkit-text-fill-color: transparent; /* Makes text transparent so gradient is visible */
-    background-clip: text; /* Standard property */
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; 
     font-weight: bold;
     font-size: 24px;
     font-family: 'Poppins', sans-serif;
