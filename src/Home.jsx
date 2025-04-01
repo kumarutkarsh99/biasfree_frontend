@@ -12,7 +12,7 @@ const Home = () => {
             Building fair AI, one detection at a time.
           </p>
           <p className="text-light fs-6">
-            AI models are powerful, but biases can creep in unnoticed. We help identify and mitigate these biases, 
+            AI models are powerful, but biases can creep in unnoticed. We help identify and mitigate gender biases, 
             ensuring fair and transparent AI decision-making.
           </p>
           <p className="fst-italic">
