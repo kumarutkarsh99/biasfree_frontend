@@ -10,7 +10,6 @@ import Footer from './Footer.jsx';
 import Barchart from './Barchart.jsx';
 import About from './About.jsx';
 
-
 const pageVariants = {
   initial: { opacity: 0, scale: 0.95, y: 10 },
   animate: { 
