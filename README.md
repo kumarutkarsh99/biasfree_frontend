@@ -18,3 +18,7 @@
 - **Deployment**:
   - Flask Backend: Hosted on Render using Gunicorn
   - Render: Used for a workable, cloud-based web app
+ 
+## Developers
+- **Full-stack Developer**: Kumar Utkarsh
+- **Machine Learning Engineer**: Soham Jain, Harshil Singh
