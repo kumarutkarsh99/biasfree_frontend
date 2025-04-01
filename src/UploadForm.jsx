@@ -8,6 +8,7 @@ const UploadForm = () => {
   const [preview, setPreview] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [isProcessing, setIsProcessing] = useState(false); 
 
   const handleInputTypeChange = (event) => {
     setInputType(event.target.value.toLowerCase());
@@ -17,8 +18,8 @@ const UploadForm = () => {
   };
 
   const toggleOpen = () => {
-    setIsOpen((prev) => !prev); 
-  }
+    setIsOpen((prev) => !prev);
+  };
 
   const handleTextChange = (event) => {
     setTextValue(event.target.value);
@@ -57,21 +58,25 @@ const UploadForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    
+    setIsProcessing(true);
 
     alert("It might take some time to process data. Please wait.");
-    
+
     const formData = new FormData();
     formData.append("input_type", inputType);
 
     if (inputType === "text") {
       if (!textValue.trim()) {
         alert("Please enter some text.");
+        setIsProcessing(false);
         return;
       }
       formData.append("text", textValue);
     } else {
       if (!file) {
         alert("Please upload a file.");
+        setIsProcessing(false);
         return;
       }
       formData.append("file", file);
@@ -94,6 +99,8 @@ const UploadForm = () => {
     } catch (error) {
       console.error(error);
       alert("Failed to analyze data.");
+    } finally {
+      setIsProcessing(false);
     }
   };
 
@@ -104,7 +111,12 @@ const UploadForm = () => {
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label className="color-text form-label fw-bold">Select Input Type</label>
-            <select className={`form-select ${isOpen ? 'open' : ''}`} value={inputType} onChange={handleInputTypeChange} onClick={toggleOpen}>
+            <select
+              className={`form-select ${isOpen ? "open" : ""}`}
+              value={inputType}
+              onChange={handleInputTypeChange}
+              onClick={toggleOpen}
+            >
               <option className="select-disabled" value="select" disabled hidden></option>
               <option value="text">Text</option>
               <option value="json">JSON File</option>
@@ -143,8 +155,8 @@ const UploadForm = () => {
             </button>
           )}
 
-          <button type="submit" className="btn btn-primary w-100">
-            Submit
+          <button type="submit" className="btn btn-primary w-100" disabled={isProcessing}>
+            {isProcessing ? "Processing..." : "Submit"}
           </button>
         </form>
       </div>
@@ -157,7 +169,10 @@ const UploadForm = () => {
                 <h5 className="modal-title">File Preview</h5>
                 <button type="button" className="btn-close" onClick={() => setShowModal(false)}></button>
               </div>
-              <div className="modal-body" style={{ maxHeight: "400px", overflowY: "scroll", whiteSpace: "pre-wrap" }}>
+              <div
+                className="modal-body"
+                style={{ maxHeight: "400px", overflowY: "scroll", whiteSpace: "pre-wrap" }}
+              >
                 <pre>{preview}</pre>
               </div>
               <div className="modal-footer">
