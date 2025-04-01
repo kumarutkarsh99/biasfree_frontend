@@ -58,6 +58,8 @@ const UploadForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
+    alert("It might take some time to process data. Please wait.");
+    
     const formData = new FormData();
     formData.append("input_type", inputType);
 
