@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="footer d-flex justify-content-between align-items-center px-0 m-0">
       <div className="container footer-box d-flex justify-content-between align-items-center flex-wrap">
         <div className="d-flex align-items-center">
-          <p className="footer-text mb-0">© 2025 BiasFree</p>
+          <p className="footer-text mb-0">© 2025 CodeManiacs</p>
         </div>
         <ul className="d-flex list-unstyled mb-0 ms-auto">
           <li className="ms-3">
