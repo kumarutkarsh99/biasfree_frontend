@@ -98,7 +98,7 @@ const UploadForm = () => {
       window.location.href = "/results";
     } catch (error) {
       console.error(error);
-      alert("Failed to analyze data.");
+      alert("Oops! Failed to analyze data. The data is too large to process right now. Please try with a smaller dataset or simplify the input.");
     } finally {
       setIsProcessing(false);
     }
