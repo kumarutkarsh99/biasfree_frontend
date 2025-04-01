@@ -13,7 +13,7 @@
 ## Tech Stack
 
 - **Frontend**: React, HTML, CSS, JavaScript (jQuery)
-- **Backend**: Flask (for initial development), Render (for final deployment), GitHub (github.com/kumarutkarsh99/biasfree_backend)
+- **Backend**: Flask (for initial development), Render (for final deployment), GitHub (kumarutkarsh99/biasfree_backend)
 - **Machine Learning Model**: Deployed on Hugging Face (`kumarutkarsh99/biasfree`)
 - **Deployment**:
   - Flask Backend: Hosted on Render using Gunicorn
