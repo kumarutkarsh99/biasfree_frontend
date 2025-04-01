@@ -1,4 +1,4 @@
-# Gender Bias Detection Dashboard
+# Biasfree - Gender Bias Detection Dashboard
 
 ## Overview
 
