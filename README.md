@@ -17,7 +17,7 @@
 - **Machine Learning Model**: Deployed on Hugging Face (`kumarutkarsh99/biasfree`)
 - **Deployment**:
   - Flask Backend: Hosted on Render using Gunicorn
-  - Render: Used for a workable, cloud-based web app
+  - React Frontend: Hosted on Vercel
  
 ## Developers
 - **Full-stack Developer**: Kumar Utkarsh
