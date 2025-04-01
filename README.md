@@ -1,12 +1,20 @@
-# React + Vite
+# Gender Bias Detection Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+**BiasFree** is a web application designed to analyze text for gender bias using a machine learning model. The tool helps identify and mitigate biased language in text data, making it valuable for researchers, content creators, and organizations aiming for inclusive communication.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Upload & Process Text**: Users can enter text or upload documents for analysis.
+- **Real-time Bias Detection**: The application highlights gender-biased terms and phrases.
+- **Visualization Dashboard**: Interactive charts and reports provide insights into bias levels.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- **Frontend**: React, HTML, CSS, JavaScript (jQuery)
+- **Backend**: Flask (for initial development), Render (for final deployment)
+- **Machine Learning Model**: Deployed on Hugging Face (`kumarutkarsh99/biasfree`)
+- **Deployment**:
+  - Flask Backend: Hosted on Render using Gunicorn
+  - Render: Used for a workable, cloud-based web app
